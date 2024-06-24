@@ -19,15 +19,18 @@ public class Color{
 		return this.color;
 	}
 
-	/* The method for changing the color
-	 * TODO: Revise the code so that it return true only if the input color is valid
-	 * 	and different from the exisitng color before making the change
-	 */
-	public boolean  changeColor(String newColor){
-		this.color = newColor;
-
-		return true;
-	}
+    	/* The method for changing the color
+    	 * Revised code to return true only if the input color is valid
+     	* and different from the existing color before making the change.
+     	*/
+    	public boolean changeColor(String newColor) {
+        // Check if the new color is valid and different from the current color
+        	if (isColorValid(newColor) && !newColor.equals(this.color)) {
+            		this.color = newColor;
+            	return true;
+        	}
+        	return false;  // Return false if the color is invalid or the same
+    	}
 
 	public boolean isColorValid(String inputColor){
 		String [] validColor = {"red","orange","yellow","green", "cyan", "blue","purple"};
