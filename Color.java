@@ -1,5 +1,8 @@
 /*
  *	Color class
+ *	Tim zhou
+ *	hzhou375@wisc.edu
+ *	cslogin: tzhou
  */
 public class Color{
 	private String color;

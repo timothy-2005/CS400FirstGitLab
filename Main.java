@@ -1,5 +1,8 @@
 /*
  * Test the use of the Color method
+ * Tim zhou
+ * hzhou375@wisc.edu
+ * tzhou
  */
 import java.util.*;
 

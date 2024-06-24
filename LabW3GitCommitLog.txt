@@ -1,0 +1,68 @@
+Script started on 2024-06-23 20:02:25-05:00 [TERM="xterm-256color" TTY="/dev/pts/7" COLUMNS="80" LINES="24"]
+[?2004h[tzhou@snares-07] (1)$ make
+[?2004ljava Main
+Beggining of testing the color class:
+What color do you want to change to? 
+orange
+The new color is:orange
+[?2004h[tzhou@snares-07] (2)$ ^[[200~git status~[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[7mgit status[27mgit status
+[?2004lOn branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	[31mmodified:   Color.java[m
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	[31mColor.class[m
+	[31mLabW3GitCommitLog.txt[m
+	[31mMain.class[m
+	[31mMakefile[m
+
+no changes added to commit (use "git add" and/or "git commit -a")
+[?2004h[tzhou@snares-07] (3)$ [7mgit add[27mgit add
+[?2004lNothing specified, nothing added.
+[33mhint: Maybe you wanted to say 'git add .'?[m
+[33mhint: Turn this message off by running[m
+[33mhint: "git config advice.addEmptyPathspec false"[m
+[?2004h[tzhou@snares-07] (4)$ git add .
+[?2004l[?2004h[tzhou@snares-07] (5)$ git commit -m '' [7mCompleted the TODO part in the changeColor[27m[7m [27m[7mmethod in Color.java, and added the Makefile[27m' [ACompleted the TODO part in the changeColor method in Color.java, and added the Makefile
+[?2004l[main 141b3f3] Completed the TODO part in the changeColor method in Color.java, and added the Makefile
+ 5 files changed, 29 insertions(+), 9 deletions(-)
+ create mode 100644 Color.class
+ create mode 100644 LabW3GitCommitLog.txt
+ create mode 100644 Main.class
+ create mode 100644 Makefile
+[?2004h[tzhou@snares-07] (6)$ git push [7mhttps://github.com/timothy-2005/CS400FirstGitLab[27m[7m.[27m[7mgit[27m[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Chttps://github.com/timothy-2005/CS400FirstGitLab.git
+[?2004lUsername for 'https://github.com': timothy-2005
+Password for 'https://timothy-2005@github.com': 
+Enumerating objects: 9, done.
+Counting objects:  11% (1/9)Counting objects:  22% (2/9)Counting objects:  33% (3/9)Counting objects:  44% (4/9)Counting objects:  55% (5/9)Counting objects:  66% (6/9)Counting objects:  77% (7/9)Counting objects:  88% (8/9)Counting objects: 100% (9/9)Counting objects: 100% (9/9), done.
+Delta compression using up to 12 threads
+Compressing objects:  16% (1/6)Compressing objects:  33% (2/6)Compressing objects:  50% (3/6)Compressing objects:  66% (4/6)Compressing objects:  83% (5/6)Compressing objects: 100% (6/6)Compressing objects: 100% (6/6), done.
+Writing objects:  14% (1/7)Writing objects:  28% (2/7)Writing objects:  42% (3/7)Writing objects:  57% (4/7)Writing objects:  71% (5/7)Writing objects:  85% (6/7)Writing objects: 100% (7/7)Writing objects: 100% (7/7), 2.26 KiB | 2.26 MiB/s, done.
+Total 7 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas:   0% (0/1)[Kremote: Resolving deltas: 100% (1/1)[Kremote: Resolving deltas: 100% (1/1), completed with 1 local object.[K
+To https://github.com/timothy-2005/CS400FirstGitLab.git
+   6468e87..141b3f3  main -> main
+[?2004h[tzhou@snares-07] (7)$ vim Color.java
+[?2004l[?1049h[22;0;0t[>4;2m[?1h=[?2004h[?1004h[1;24r[?12h[?12l[22;2t[22;1t[27m[23m[29m[m[H[2J[?25l[24;1H"Color.java" 46L, 1175B[2;1H▽[6n[2;1H  [3;1HPzz\[0%m[6n[3;1H           [1;1H[>c]10;?]11;?[1;1H[34m/*
+ *      Color class[m[2;20H[K[3;1H[34m */[m[3;4H[K[4;1H[32mpublic[m [32mclass[m Color{[5;9H[32mprivate[m String color;[7;9H[34m//Constructor[m[8;9H[32mpublic[m Color(String iniColor){[9;17H[38;5;130mif[m(isColorValid(iniColor)){[10;25H[32mthis[m.color = iniColor;[11;17H}[12;17H[38;5;130melse[m{[13;25HSystem.out.println([31m"Failed to initalize the color"[m);[14;17H}[15;9H}[17;9H[34m//Getter[m[18;9H[32mpublic[m String getColor(){[19;17H[38;5;130mreturn[m [32mthis[m.color;[20;9H}[22;9H[34m/* The method for changing the color
+         * Revised code to return true only if the input color is valid[m[24;63H1,1[11CTop[1;1H[?25hP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\P$q q\[?12$p[?25l[24;53H0[1;1H[24;54H3[1;1H[24;55H0[1;1H[24;56H/[1;1H[24;57H0[1;1H[24;58Ha[1;1H[24;59H0[1;1H[24;60Ha[1;1H[24;61H/[1;1H[24;62H2[1;1H[24;53H          [1;1H[27m[23m[29m[m[H[2J[1;1H[96m/*
+ *      Color class
+ */[m
+[38;5;121mpublic[m [38;5;121mclass[m Color{[5;9H[38;5;121mprivate[m String color;[7;9H[96m//Constructor[m[8;9H[38;5;121mpublic[m Color(String iniColor){[9;17H[93mif[m(isColorValid(iniColor)){[10;25H[38;5;121mthis[m.color = iniColor;[11;17H}[12;17H[93melse[m{[13;25HSystem.out.println([95m"Failed to initalize the color"[m);[14;17H}[15;9H}[17;9H[96m//Getter[m[18;9H[38;5;121mpublic[m String getColor(){[19;17H[93mreturn[m [38;5;121mthis[m.color;[20;9H}[22;9H[96m/* The method for changing the color
+         * Revised code to return true only if the input color is valid[m[24;63H1,1[11CTop"Color.java" 46L, 1175B[1;1H[?25h[?25l[24;53H~@k[1;1H[24;53H   [2;1H[24;63H2[2;1H[?25h[?25l[24;53H~@k[2;1H[24;53H   [2;2H[24;65H2[2;2H[?25h[?25l[24;53H~@k[2;2H[24;53H   [2;8H[24;65H3-8[2;8H[?25h[?25l[24;53H~@k[2;8H[24;53H   [2;9H[24;65H4-9[2;9H[?25h[?25l[24;53H~@k[2;9H[24;53H   [2;10H[24;65H5-10[2;10H[?25h[?25l[24;53H~@k[2;10H[24;53H   [2;11H[24;65H6-11[2;11H[?25h[?25l[24;53H~@k[2;11H[24;53H   [2;12H[24;65H7-12[2;12H[?25h[?25l[24;53H~@k[2;12H[24;53H   [2;13H[24;65H8-13[2;13H[?25h[?25l[24;53H~@k[2;13H[24;53H   [2;14H[24;65H9-14[2;14H[?25h[?25l[24;53H~@k[2;14H[24;53H   [2;15H[24;65H10-15[2;15H[?25h[?25l[24;53H~@k[2;15H[24;53H   [2;16H[24;66H1-16[2;16H[?25h[?25l[24;53H~@k[2;16H[24;53H   [2;17H[24;66H2-17[2;17H[?25h[?25l[24;53H~@k[2;17H[24;53H   [2;18H[24;66H3-18[2;18H[?25h[?25l[24;53H~@k[2;18H[24;53H   [2;19H[24;66H4-19[2;19H[?25h[?25l[24;53H~@k[2;19H[24;53H   [2;19H[?25h[?25l[24;53H^M[2;19H[24;53H  [3;2H[24;63H3,2    [3;2H[?25h[?25l[24;53Hi[3;2H[24;53H [3;2H[24;1H[1m-- INSERT --[m[24;14H[K[24;63H3,2[11CTop[3;2H[?25h[?25l[24;63H2[2;2H[?25h[?25l[24;65H3[2;3H[?25h[?25l[24;65H4-9[2;9H[?25h[?25l[24;65H5-10[2;10H[?25h[?25l[24;65H6-11[2;11H[?25h[?25l[24;65H7-12[2;12H[?25h[?25l[24;65H8-13[2;13H[?25h[?25l[24;65H9-14[2;14H[?25h[?25l[24;65H10-15[2;15H[?25h[?25l[24;66H1-16[2;16H[?25h[?25l[24;66H2-17[2;17H[?25h[?25l[24;66H3-18[2;18H[?25h[?25l[24;66H4-19[2;19H[?25h[?25l[24;66H5-20[2;20H[?25h[?25l[3;23r[3;1H[L[1;24r[3;1H[96m *      [m[24;63H[K[24;63H3,4-9[9CTop[3;9H[?25h[?25l[96mT[m[24;65H5-10[3;10H[?25h[?25l[96mi[m[24;65H6-11[3;11H[?25h[?25l[96mm[m[24;65H7-12[3;12H[?25h[?25l[96m [m[24;65H8-13[3;13H[?25h[?25l[96mz[m[24;65H9-14[3;14H[?25h[?25l[96mh[m[24;65H10-15[3;15H[?25h[?25l[96mo[m[24;66H1-16[3;16H[?25h[?25l[96mu[m[24;66H2-17[3;17H[?25h[?25l[3;16H[K[24;66H1-16[3;16H[?25h[?25l[3;15H[K[24;66H0-15[3;15H[?25h[?25l[3;14H[K[24;65H9-14 [3;14H[?25h[?25l[3;13H[K[24;65H8-13[3;13H[?25h[?25l[3;12H[K[24;65H7-12[3;12H[?25h[?25l[3;11H[K[24;65H6-11[3;11H[?25h[?25l[3;10H[K[24;65H5-10[3;10H[?25h[?25l[3;9H[K[24;65H4-9 [3;9H[?25h[?25l[96mT[m[24;65H5-10[3;10H[?25h[?25l[96mi[m[24;65H6-11[3;11H[?25h[?25l[96mm[m[24;65H7-12[3;12H[?25h[?25l[96m [m[24;65H8-13[3;13H[?25h[?25l[96mz[m[24;65H9-14[3;14H[?25h[?25l[96mh[m[24;65H10-15[3;15H[?25h[?25l[96mo[m[24;66H1-16[3;16H[?25h[?25l[96mu[m[24;66H2-17[3;17H[?25h[?25l[4;23r[4;1H[L[1;24r[4;1H[96m *      [m[24;63H[K[24;63H4,4-9[9CTop[4;9H[?25h[?25l[96mh[m[24;65H5-10[4;10H[?25h[?25l[96mz[m[24;65H6-11[4;11H[?25h[?25l[96mh[m[24;65H7-12[4;12H[?25h[?25l[96mo[m[24;65H8-13[4;13H[?25h[?25l[96mu[m[24;65H9-14[4;14H[?25h[?25l[96m3[m[24;65H10-15[4;15H[?25h[?25l[96m7[m[24;66H1-16[4;16H[?25h[?25l[96m5[m[24;66H2-17[4;17H[?25h[?25l[96m@[m[24;66H3-18[4;18H[?25h[?25l[96mw[m[24;66H4-19[4;19H[?25h[?25l[96mi[m[24;66H5-20[4;20H[?25h[?25l[96ms[m[24;66H6-21[4;21H[?25h[?25l[96mc[m[24;66H7-22[4;22H[?25h[?25l[96m.[m[24;66H8-23[4;23H[?25h[?25l[96me[m[24;66H9-24[4;24H[?25h[?25l[96md[m[24;65H20-25[4;25H[?25h[?25l[96mu[m[24;66H1-26[4;26H[?25h[?25l[5;23r[5;1H[L[1;24r[5;1H[96m *      [m[24;63H[K[24;63H5,4-9[9CTop[5;9H[?25h[?25l[96mt[m[24;65H5-10[5;10H[?25h[?25l[96mz[m[24;65H6-11[5;11H[?25h[?25l[96mh[m[24;65H7-12[5;12H[?25h[?25l[96mo[m[24;65H8-13[5;13H[?25h[?25l[96mu[m[24;65H9-14[5;14H[?25h[?25l[5;13H[K[24;65H8-13[5;13H[?25h[?25l[5;12H[K[24;65H7-12[5;12H[?25h[?25l[5;11H[K[24;65H6-11[5;11H[?25h[?25l[5;10H[K[24;65H5-10[5;10H[?25h[?25l[5;9H[K[24;65H4-9 [5;9H[?25h[?25l[96mc[m[24;65H5-10[5;10H[?25h[?25l[96ms[m[24;65H6-11[5;11H[?25h[?25l[96ml[m[24;65H7-12[5;12H[?25h[?25l[96mo[m[24;65H8-13[5;13H[?25h[?25l[96mg[m[24;65H9-14[5;14H[?25h[?25l[96mi[m[24;65H10-15[5;15H[?25h[?25l[96mn[m[24;66H1-16[5;16H[?25h[?25l[96m [m[24;66H2-17[5;17H[?25h[?25l[5;16H[K[24;66H1-16[5;16H[?25h[?25l[96m:[m[24;66H2-17[5;17H[?25h[?25l[96m [m[24;66H3-18[5;18H[?25h[?25l[96mt[m[24;66H4-19[5;19H[?25h[?25l[96mz[m[24;66H5-20[5;20H[?25h[?25l[96mh[m[24;66H6-21[5;21H[?25h[?25l[96mo[m[24;66H7-22[5;22H[?25h[?25l[96mu[m[24;66H8-23[5;23H[?25h[24;1H[K[5;22H[?25l[24;53H^[[5;22H[24;53H  [5;23H[24;63H5,17-22[7CTop[5;22H[?25h[?25l[24;53H:[5;22H[24;53H[K[24;1H:[?25hwq[?25l[?2004l[>4;m"Color.java" 49L, 1226B written[23;2t[23;1t
+[?1004l[?2004l[?1l>[?25h[>4;m[?1049l[23;0;0t[?2004h[tzhou@snares-07] (8)$ vim Main.java
+[?2004l[?1049h[22;0;0t[>4;2m[?1h=[?2004h[?1004h[1;24r[?12h[?12l[22;2t[22;1t[27m[23m[29m[m[H[2J[?25l[24;1H"Main.java" 22L, 565B[2;1H▽[6n[2;1H  [3;1HPzz\[0%m[6n[3;1H           [1;1H[>c]10;?]11;?[1;1H[34m/*
+ * Test the use of the Color method[m[2;36H[K[3;1H[34m */[m[3;4H[K[4;1H[35mimport[m java.util.*;
+
+[32mpublic[m [32mclass[m Main{[7;9H[32mpublic[m [32mstatic[m [32mvoid[m main(String [] args){[8;17HScanner input = [38;5;130mnew[m Scanner(System.in);[9;17HSystem.out.println([31m"Beggining of testing the color class:"[m);[10;17HColor myColor = [38;5;130mnew[m Color([31m"blue"[m);[12;17HSystem.out.println([31m"What color do you want to change to? "[m);[13;17HString newColor = input.next();[14;17H[34m//If color change succeeded[m[15;17H[38;5;130mif[m( myColor.changeColor(newColor)){[16;25HSystem.out.println([31m"The new color is:"[m+myColor.getColor(([17;1H));[18;17H}[19;17H[38;5;130melse[m{[20;25HSystem.out.println([31m"Color change failed! "[m);[21;17H}[22;9H}
+}[24;63H1,1[11CAll[1;1H[?25hP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\P$q q\[?12$p[?25l[24;53H0[1;1H[24;54H3[1;1H[24;55H0[1;1H[24;56H/[1;1H[24;57H0[1;1H[24;58Ha[1;1H[24;59H0[1;1H[24;60Ha[1;1H[24;61H/[1;1H[24;62H2[1;1H[24;53H          [1;1H[27m[23m[29m[m[H[2J[1;1H[96m/*
+ * Test the use of the Color method
+ */[m
+[38;5;81mimport[m java.util.*;
+
+[38;5;121mpublic[m [38;5;121mclass[m Main{[7;9H[38;5;121mpublic[m [38;5;121mstatic[m [38;5;121mvoid[m main(String [] args){[8;17HScanner input = [93mnew[m Scanner(System.in);[9;17HSystem.out.println([95m"Beggining of testing the color class:"[m);[10;17HColor myColor = [93mnew[m Color([95m"blue"[m);[12;17HSystem.out.println([95m"What color do you want to change to? "[m);[13;17HString newColor = input.next();[14;17H[96m//If color change succeeded[m[15;17H[93mif[m( myColor.changeColor(newC
